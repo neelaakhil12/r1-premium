@@ -43,41 +43,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- MOBILE NAV MENU TOGGLE ---
+  // --- MOBILE NAV MENU TOGGLE (DRAWER) ---
   const menuBtn = document.getElementById('menu-btn');
+  const menuCloseBtn = document.getElementById('menu-close-btn');
   const mobileMenu = document.getElementById('mobile-menu');
-  const menuIcon = menuBtn ? menuBtn.querySelector('i') : null;
+  const mobileBackdrop = document.getElementById('mobile-backdrop');
 
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      mobileMenu.classList.toggle('flex');
+  function openMenu() {
+    if (mobileMenu) mobileMenu.classList.add('drawer-open');
+    if (mobileBackdrop) mobileBackdrop.classList.add('backdrop-visible');
+    document.body.classList.add('menu-open', 'overflow-hidden');
+    if (menuBtn) {
+      const icon = menuBtn.querySelector('i');
+      if (icon) icon.className = 'fas fa-times text-2xl text-primary';
+    }
+  }
 
-      // Toggle body class so iframes are hidden when menu is open
-      const isOpen = !mobileMenu.classList.contains('hidden');
-      document.body.classList.toggle('menu-open', isOpen);
-      
-      // Toggle menu icon between bars and times (close)
-      if (menuIcon) {
-        if (mobileMenu.classList.contains('hidden')) {
-          menuIcon.className = 'fas fa-bars text-2xl text-white';
-        } else {
-          menuIcon.className = 'fas fa-times text-2xl text-primary';
-        }
-      }
-    });
+  function closeMenu() {
+    if (mobileMenu) mobileMenu.classList.remove('drawer-open');
+    if (mobileBackdrop) mobileBackdrop.classList.remove('backdrop-visible');
+    document.body.classList.remove('menu-open', 'overflow-hidden');
+    if (menuBtn) {
+      const icon = menuBtn.querySelector('i');
+      if (icon) icon.className = 'fas fa-bars text-2xl';
+    }
+  }
 
-    // Close mobile menu when clicking a link
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        mobileMenu.classList.remove('flex');
-        document.body.classList.remove('menu-open');
-        if (menuIcon) {
-          menuIcon.className = 'fas fa-bars text-2xl text-white';
-        }
-      });
+  if (menuBtn) menuBtn.addEventListener('click', openMenu);
+  if (menuCloseBtn) menuCloseBtn.addEventListener('click', closeMenu);
+  if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeMenu);
+
+  // Close menu when a nav link is clicked
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
     });
   }
 
