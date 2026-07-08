@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #0F0F10;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+/* Custom Scrollbar for Luxury Feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0F0F10;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C89B2A;
+}
+
+/* Hide iframes when mobile menu is open to prevent bleed-through */
+body.menu-open iframe {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Custom Styles */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #E8C45C 0%, #D4AF37 50%, #C89B2A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #E8C45C 0%, #D4AF37 50%, #C89B2A 100%);
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(180deg, #181818 0%, #0F0F10 100%);
+}
+
+.border-glow {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #2E2E2E;
+}
+.border-glow:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Timeline Custom Styles */
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #2E2E2E;
+  top: 50%;
+  left: 100%;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .timeline-dot::after {
+    display: none;
+  }
+}
+
+/* Custom lightbox layout */
+.lightbox-backdrop {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* Custom class for slider heights to prevent collapse */
+.before-after-slider {
+  height: 250px;
+}
+@media (min-width: 640px) {
+  .before-after-slider {
+    height: 380px;
+  }
+}
+
+
+/* Custom slider-range styling to allow clicking and dragging across the full height of the cards */
+.slider-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  margin: 0;
+}
+.slider-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 100vh;
+  cursor: ew-resize;
+  background: transparent;
+}
+.slider-range::-moz-range-thumb {
+  width: 40px;
+  height: 100vh;
+  cursor: ew-resize;
+  background: transparent;
+  border: none;
+}
+
+/* Splash Screen Preloader Styles */
+.draw-path {
+  fill: none;
+  stroke: url(#goldGrad);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+}
+
+.circle-path {
+  stroke-width: 3;
+  animation: drawStroke 2.5s cubic-bezier(0.4, 0, 0.2, 1) 0s forwards;
+}
+
+.letter-path {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  stroke-width: 5;
+  animation: drawStroke 2.2s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards, fadeOutLetters 1.0s cubic-bezier(0.4, 0, 0.2, 1) 3.5s forwards;
+}
+
+@keyframes drawStroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeOutLetters {
+  to {
+    opacity: 0;
+  }
+}
+
+.logo-img-reveal {
+  animation: fadeInLogo 1.8s cubic-bezier(0.4, 0, 0.2, 1) 4.5s forwards, logoPulse 3s infinite ease-in-out 6.3s;
+}
+
+.splash-text-reveal {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  white-space: nowrap;
+  opacity: 0;
+  clip-path: inset(0 100% 0 0);
+  animation: fadeInText 0.1s 4.8s forwards, revealText 1.8s steps(10) 4.8s forwards;
+}
+
+@keyframes fadeInLogo {
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.5));
+  }
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes revealText {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.5));
+  }
+  50% {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 35px rgba(212, 175, 55, 0.7));
+  }
+}
+
+/* Header Logo Brand Name Styles */
+.header-typewriter {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+

@@ -1,0 +1,15 @@
+{
+  "name": "r1-premium",
+  "version": "1.0.0",
+  "description": "Premium Invisible Grills and Cloth Hanger Installation Website in Hyderabad",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/styles.css --minify",
+    "watch:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/styles.css --watch",
+    "dev": "npx -y http-server -c-1 -p 8080",
+    "start": "npx -y http-server -c-1 -p 8080"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
