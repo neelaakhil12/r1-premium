@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -88,51 +88,51 @@
         <i class="fas fa-bars text-2xl"></i>
       </button>
     </div>
+  </header>
 
-    <!-- MOBILE MENU BACKDROP -->
-    <div id="mobile-backdrop" class="md:hidden fixed inset-0 bg-black/60 z-[48]"></div>
+  <!-- MOBILE MENU BACKDROP (outside header to avoid backdrop-filter containing-block bug) -->
+  <div id="mobile-backdrop" class="md:hidden fixed inset-0 bg-black/60 z-[48]"></div>
 
-    <!-- MOBILE MENU DRAWER -->
-    <div id="mobile-menu" class="md:hidden fixed top-0 left-0 bottom-0 w-[82%] max-w-sm bg-[#0a0a0a] z-[49] flex flex-col pt-6 pb-8 px-8 shadow-2xl overflow-y-auto">
+  <!-- MOBILE MENU DRAWER -->
+  <div id="mobile-menu" class="md:hidden fixed top-0 left-0 bottom-0 w-[82%] max-w-sm bg-[#0a0a0a] z-[49] flex flex-col pt-6 pb-8 px-8 shadow-2xl overflow-y-auto">
 
-      <!-- Drawer Header -->
-      <div class="flex items-center justify-between mb-10">
-        <a href="index.html" class="flex items-center space-x-2">
-          <img src="assets/images/logo.png" alt="R1 Premium" class="h-9 w-auto object-contain">
-          <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">R1 Premium</span>
-        </a>
-        <button id="menu-close-btn" class="text-white hover:text-primary transition-colors focus:outline-none p-1" aria-label="Close Menu">
-          <i class="fas fa-times text-2xl"></i>
-        </button>
-      </div>
+    <!-- Drawer Header -->
+    <div class="flex items-center justify-between mb-10">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="assets/images/logo.png" alt="R1 Premium" class="h-9 w-auto object-contain">
+        <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">R1 Premium</span>
+      </a>
+      <button id="menu-close-btn" class="text-white hover:text-primary transition-colors focus:outline-none p-1" aria-label="Close Menu">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
 
-      <!-- Nav Links -->
-      <nav class="flex flex-col flex-grow">
-        <a href="index.html" class="text-primary font-poppins font-semibold text-2xl py-5 border-b border-white/10 hover:text-primary transition-colors">Home</a>
-        <a href="services.html" class="text-white font-poppins text-2xl py-5 border-b border-white/10 hover:text-primary transition-colors">Services</a>
-        <a href="about.html" class="text-white font-poppins text-2xl py-5 border-b border-white/10 hover:text-primary transition-colors">About Us</a>
-        <a href="works.html" class="text-white font-poppins text-2xl py-5 border-b border-white/10 hover:text-primary transition-colors">Recent Works</a>
-        <a href="contact.html" class="text-white font-poppins text-2xl py-5 hover:text-primary transition-colors">Contact</a>
-      </nav>
+    <!-- Nav Links -->
+    <nav class="flex flex-col flex-grow">
+      <a href="index.html" class="text-primary font-poppins font-semibold text-2xl py-5 border-b border-white/10">Home</a>
+      <a href="services.html" class="text-white font-poppins text-2xl py-5 border-b border-white/10 hover:text-primary transition-colors">Services</a>
+      <a href="about.html" class="text-white font-poppins text-2xl py-5 border-b border-white/10 hover:text-primary transition-colors">About Us</a>
+      <a href="works.html" class="text-white font-poppins text-2xl py-5 border-b border-white/10 hover:text-primary transition-colors">Recent Works</a>
+      <a href="contact.html" class="text-white font-poppins text-2xl py-5 hover:text-primary transition-colors">Contact</a>
+    </nav>
 
-      <!-- Contact Info -->
-      <div class="mt-6 mb-5 pt-5 border-t border-white/10 space-y-3">
-        <a href="tel:+919000278570" class="flex items-center space-x-3 text-white text-sm hover:text-primary transition-colors">
-          <i class="fas fa-phone-alt text-primary text-xs"></i>
-          <span>+91 9000278570</span>
-        </a>
-        <a href="https://wa.me/919000278570" target="_blank" class="flex items-center space-x-3 text-green-400 text-sm hover:text-green-300 transition-colors">
-          <i class="fab fa-whatsapp text-xs"></i>
-          <span>Chat on WhatsApp</span>
-        </a>
-      </div>
-
-      <!-- CTA Button -->
-      <a href="contact.html" class="bg-gold-gradient text-background font-poppins font-bold py-3.5 rounded text-xs uppercase tracking-widest text-center shadow-gold-glow">
-        Book Consultation
+    <!-- Contact Info -->
+    <div class="mt-6 mb-5 pt-5 border-t border-white/10 space-y-3">
+      <a href="tel:+919000278570" class="flex items-center space-x-3 text-white text-sm hover:text-primary transition-colors">
+        <i class="fas fa-phone-alt text-primary text-xs"></i>
+        <span>+91 9000278570</span>
+      </a>
+      <a href="https://wa.me/919000278570" target="_blank" class="flex items-center space-x-3 text-green-400 text-sm hover:text-green-300 transition-colors">
+        <i class="fab fa-whatsapp text-xs"></i>
+        <span>Chat on WhatsApp</span>
       </a>
     </div>
-  </header>
+
+    <!-- CTA Button -->
+    <a href="contact.html" class="bg-gold-gradient text-background font-poppins font-bold py-3.5 rounded text-xs uppercase tracking-widest text-center shadow-gold-glow">
+      Book Consultation
+    </a>
+  </div>
 
   <!-- HERO SECTION -->
   <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-cover bg-center" style="background-image: url('assets/images/hero-bg.png');">
@@ -155,129 +155,218 @@
           R1 Premium provides high-quality Invisible Grill Installation and Stainless Steel Cloth Hanger Installation for apartments, villas, homes, offices, and commercial buildings throughout Hyderabad.
         </p>
 
+        <!-- Hero CTA Buttons -->
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a href="contact.html" class="bg-gold-gradient text-background font-poppins font-bold px-8 py-3.5 rounded-full shadow-gold-glow hover:scale-105 active:scale-95 transition-transform duration-200 flex items-center space-x-2">
+            <i class="fas fa-envelope"></i>
+            <span>Contact Us</span>
+          </a>
+          <a href="services.html" class="bg-transparent border-2 border-primary text-primary font-poppins font-bold px-8 py-3.5 rounded-full hover:bg-primary hover:text-background transition-colors duration-300 flex items-center space-x-2">
+            <i class="fas fa-th-large"></i>
+            <span>View Our Services</span>
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- COMPANY INTRODUCTION -->
-  <section class="py-20 bg-section-bg border-b border-border-color">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
-      <span class="text-primary font-poppins font-semibold text-sm uppercase tracking-wider">About R1 Premium</span>
-      <h2 class="text-3xl md:text-4xl font-poppins font-extrabold mt-2 mb-6">Expert Safety and Drying Solutions in Hyderabad</h2>
-      <p class="max-w-3xl mx-auto text-text-secondary text-base md:text-lg leading-relaxed mb-8">
-        R1 Premium is committed to making modern homes safer, smarter, and more elegant. We combine state-of-the-art materials like high-tensile SS316 marine-grade steel cables with engineered ceiling systems to provide maximum security for balconies, windows, and utility spaces without compromising on structural ventilation or scenic views.
-      </p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-10" id="stats-grid">
-        <div class="bg-card-bg p-6 rounded-xl border border-border-color">
-          <p class="text-3xl md:text-4xl font-poppins font-extrabold text-primary stat-number" data-target="500" data-suffix="+">0+</p>
-          <p class="text-sm text-text-secondary mt-1">Completed Projects</p>
+  <!-- BEFORE & AFTER TRANSFORMATIONS -->
+  <section class="py-20 bg-background border-b border-border-color overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-6" data-aos="fade-up">
+        <span class="text-primary font-poppins font-semibold text-xs uppercase tracking-wider block">Transformations</span>
+        <h2 class="text-3xl md:text-4xl font-poppins font-extrabold mt-1 text-white">Before &amp; After Showcase</h2>
+        <p class="text-text-secondary mt-3 text-sm md:text-base max-w-xl mx-auto">Drag the golden divider to see the structural conversion from bare spaces to customized installations.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        
+        <!-- Slider 1: Invisible Grills -->
+        <div class="relative before-after-slider rounded-2xl overflow-hidden shadow-2xl border border-border-color select-none" id="slider-1" data-aos="fade-right">
+          <!-- Background After Image -->
+          <img src="assets/images/after-balcony.png" alt="After Grill Installation" class="absolute inset-0 w-full h-full object-cover" draggable="false" loading="lazy">
+          <div class="absolute bottom-4 right-4 bg-primary text-background px-3 py-1 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">After</div>
+          
+          <!-- Foreground Clipped Before Image -->
+          <img src="assets/images/before-balcony.png" alt="Before Grill Installation" class="absolute inset-0 w-full h-full object-cover" id="before-img-1" style="clip-path: inset(0 50% 0 0);" draggable="false" loading="lazy">
+          <div class="absolute bottom-4 left-4 bg-black/90 text-white px-3 py-1 border border-border-color/50 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">Before</div>
+          
+          <!-- Range Input Slider -->
+          <input type="range" min="0" max="100" value="50" class="slider-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" data-target="1">
+          
+          <!-- Divider Bar -->
+          <div class="absolute inset-y-0 w-1 bg-primary z-20 pointer-events-none" id="slider-line-1" style="left: 50%;">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border border-background flex items-center justify-center shadow-lg">
+              <div class="flex gap-0.5">
+                <div class="w-[2px] h-3.5 bg-background"></div>
+                <div class="w-[2px] h-3.5 bg-background"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="bg-card-bg p-6 rounded-xl border border-border-color">
-          <p class="text-3xl md:text-4xl font-poppins font-extrabold text-primary stat-number" data-target="100" data-suffix="%">0%</p>
-          <p class="text-sm text-text-secondary mt-1">Rust-Proof Materials</p>
+
+        <!-- Slider 2: Cloth Hangers -->
+        <div class="relative before-after-slider rounded-2xl overflow-hidden shadow-2xl border border-border-color select-none" id="slider-2" data-aos="fade-left">
+          <!-- Background After Image -->
+          <img src="assets/images/after-utility.png" alt="After Hanger Installation" class="absolute inset-0 w-full h-full object-cover" draggable="false" loading="lazy">
+          <div class="absolute bottom-4 right-4 bg-primary text-background px-3 py-1 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">After</div>
+          
+          <!-- Foreground Clipped Before Image -->
+          <img src="assets/images/before-utility.png" alt="Before Hanger Installation" class="absolute inset-0 w-full h-full object-cover" id="before-img-2" style="clip-path: inset(0 50% 0 0);" draggable="false" loading="lazy">
+          <div class="absolute bottom-4 left-4 bg-black/90 text-white px-3 py-1 border border-border-color/50 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">Before</div>
+          
+          <!-- Range Input Slider -->
+          <input type="range" min="0" max="100" value="50" class="slider-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" data-target="2">
+          
+          <!-- Divider Bar -->
+          <div class="absolute inset-y-0 w-1 bg-primary z-20 pointer-events-none" id="slider-line-2" style="left: 50%;">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border border-background flex items-center justify-center shadow-lg">
+              <div class="flex gap-0.5">
+                <div class="w-[2px] h-3.5 bg-background"></div>
+                <div class="w-[2px] h-3.5 bg-background"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="bg-card-bg p-6 rounded-xl border border-border-color">
-          <p class="text-3xl md:text-4xl font-poppins font-extrabold text-primary stat-number" data-target="10" data-suffix="+">0+</p>
-          <p class="text-sm text-text-secondary mt-1">Years Experience</p>
+
+        <!-- Slider 3: Invisible Grills Balcony 2 -->
+        <div class="relative before-after-slider rounded-2xl overflow-hidden shadow-2xl border border-border-color select-none" id="slider-3" data-aos="fade-up">
+          <!-- Background After Image -->
+          <img src="assets/images/after-balcony-2.png" alt="After Grill Installation 2" class="absolute inset-0 w-full h-full object-cover" draggable="false" loading="lazy">
+          <div class="absolute bottom-4 right-4 bg-primary text-background px-3 py-1 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">After</div>
+          
+          <!-- Foreground Clipped Before Image -->
+          <img src="assets/images/before-balcony-2.png" alt="Before Grill Installation 2" class="absolute inset-0 w-full h-full object-cover" id="before-img-3" style="clip-path: inset(0 50% 0 0);" draggable="false" loading="lazy">
+          <div class="absolute bottom-4 left-4 bg-black/90 text-white px-3 py-1 border border-border-color/50 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">Before</div>
+          
+          <!-- Range Input Slider -->
+          <input type="range" min="0" max="100" value="50" class="slider-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" data-target="3">
+          
+          <!-- Divider Bar -->
+          <div class="absolute inset-y-0 w-1 bg-primary z-20 pointer-events-none" id="slider-line-3" style="left: 50%;">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border border-background flex items-center justify-center shadow-lg">
+              <div class="flex gap-0.5">
+                <div class="w-[2px] h-3.5 bg-background"></div>
+                <div class="w-[2px] h-3.5 bg-background"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="bg-card-bg p-6 rounded-xl border border-border-color">
-          <p class="text-3xl md:text-4xl font-poppins font-extrabold text-primary stat-number" data-target="24" data-suffix="/7">0/7</p>
-          <p class="text-sm text-text-secondary mt-1">Customer Support</p>
+
+        <!-- Slider 4: Window Invisible Grills -->
+        <div class="relative before-after-slider rounded-2xl overflow-hidden shadow-2xl border border-border-color select-none" id="slider-4" data-aos="fade-up">
+          <!-- Background After Image -->
+          <img src="assets/images/after-window.png" alt="After Window Grill Installation" class="absolute inset-0 w-full h-full object-cover" draggable="false" loading="lazy">
+          <div class="absolute bottom-4 right-4 bg-primary text-background px-3 py-1 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">After</div>
+          
+          <!-- Foreground Clipped Before Image -->
+          <img src="assets/images/before-window.png" alt="Before Window Grill Installation" class="absolute inset-0 w-full h-full object-cover" id="before-img-4" style="clip-path: inset(0 50% 0 0);" draggable="false" loading="lazy">
+          <div class="absolute bottom-4 left-4 bg-black/90 text-white px-3 py-1 border border-border-color/50 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">Before</div>
+          
+          <!-- Range Input Slider -->
+          <input type="range" min="0" max="100" value="50" class="slider-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" data-target="4">
+          
+          <!-- Divider Bar -->
+          <div class="absolute inset-y-0 w-1 bg-primary z-20 pointer-events-none" id="slider-line-4" style="left: 50%;">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border border-background flex items-center justify-center shadow-lg">
+              <div class="flex gap-0.5">
+                <div class="w-[2px] h-3.5 bg-background"></div>
+                <div class="w-[2px] h-3.5 bg-background"></div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Slider 5: Staircase Invisible Grills -->
+        <div class="relative before-after-slider rounded-2xl overflow-hidden shadow-2xl border border-border-color select-none" id="slider-5" data-aos="fade-up">
+          <!-- Background After Image -->
+          <img src="assets/images/after-staircase.png" alt="After Staircase Grill Installation" class="absolute inset-0 w-full h-full object-cover" draggable="false" loading="lazy">
+          <div class="absolute bottom-4 right-4 bg-primary text-background px-3 py-1 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">After</div>
+          
+          <!-- Foreground Clipped Before Image -->
+          <img src="assets/images/before-staircase.png" alt="Before Staircase Grill Installation" class="absolute inset-0 w-full h-full object-cover" id="before-img-5" style="clip-path: inset(0 50% 0 0);" draggable="false" loading="lazy">
+          <div class="absolute bottom-4 left-4 bg-black/90 text-white px-3 py-1 border border-border-color/50 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">Before</div>
+          
+          <!-- Range Input Slider -->
+          <input type="range" min="0" max="100" value="50" class="slider-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" data-target="5">
+          
+          <!-- Divider Bar -->
+          <div class="absolute inset-y-0 w-1 bg-primary z-20 pointer-events-none" id="slider-line-5" style="left: 50%;">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border border-background flex items-center justify-center shadow-lg">
+              <div class="flex gap-0.5">
+                <div class="w-[2px] h-3.5 bg-background"></div>
+                <div class="w-[2px] h-3.5 bg-background"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- WHY CHOOSE US -->
+  <!-- RECENT WORKS PREVIEW -->
   <section class="py-20 bg-background border-b border-border-color">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <span class="text-primary font-poppins font-semibold text-sm uppercase tracking-wider">Unmatched Standard</span>
-        <h2 class="text-3xl md:text-4xl font-poppins font-extrabold mt-2">Why Customers Trust R1 Premium</h2>
-        <p class="text-text-secondary mt-4 max-w-xl mx-auto">We focus on professional craftsmanship, high-grade components, and long-term durability.</p>
+      <div class="flex flex-col md:flex-row items-end justify-between mb-12" data-aos="fade-up">
+        <div>
+          <span class="text-primary font-poppins font-semibold text-sm uppercase tracking-wider">Gallery Showcase</span>
+          <h2 class="text-3xl md:text-4xl font-poppins font-extrabold mt-2">Recent Installation Projects</h2>
+        </div>
+        <a href="works.html" class="mt-4 md:mt-0 bg-card-bg border border-border-color text-white hover:border-primary hover:text-primary transition-all font-poppins font-semibold px-6 py-2.5 rounded-full text-sm flex items-center space-x-2 shadow">
+          <span>View All Installations</span>
+          <i class="fas fa-arrow-right text-xs"></i>
+        </a>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-        <!-- 1 -->
-        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="50">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
-            <i class="fas fa-award"></i>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Project 1 -->
+        <div class="bg-card-bg rounded-2xl overflow-hidden border border-border-color shadow-lg group relative" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative overflow-hidden h-64">
+            <img src="assets/images/grill-balcony.png" alt="Balcony Invisible Grill Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <a href="assets/images/grill-balcony.png" class="lightbox-trigger absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl" data-title="Luxury Balcony Invisible Grill" data-location="Gachibowli, Hyderabad" data-category-name="Balcony Invisible Grills">
+              <i class="fas fa-search-plus"></i>
+            </a>
           </div>
-          <h4 class="font-poppins font-bold text-base text-white">Premium Materials</h4>
-          <p class="text-xs text-text-secondary mt-2">SS316 marine-grade wire rope and UV-resistant nylon casings.</p>
-        </div>
-        <!-- 2 -->
-        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
-            <i class="fas fa-user-shield"></i>
+          <div class="p-6">
+            <span class="text-xs font-poppins font-semibold text-primary uppercase tracking-wide">Balcony Grill</span>
+            <h4 class="font-poppins font-bold text-lg text-white mt-1">High-Rise Balcony Installation</h4>
+            <p class="text-xs text-text-secondary mt-1"><i class="fas fa-map-marker-alt text-primary/80 mr-1"></i>My Home Avana, Gachibowli</p>
           </div>
-          <h4 class="font-poppins font-bold text-base text-white">Professional Setup</h4>
-          <p class="text-xs text-text-secondary mt-2">Highly engineered structure installation for maximum structural rigidity.</p>
         </div>
-        <!-- 3 -->
-        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="150">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
-            <i class="fas fa-users-cog"></i>
+
+        <!-- Project 2 -->
+        <div class="bg-card-bg rounded-2xl overflow-hidden border border-border-color shadow-lg group relative" data-aos="fade-up" data-aos-delay="200">
+          <div class="relative overflow-hidden h-64">
+            <img src="assets/images/window-grill.png" alt="French Window Grill Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <a href="assets/images/window-grill.png" class="lightbox-trigger absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl" data-title="French Window Invisible Grill" data-location="Jubilee Hills, Hyderabad" data-category-name="Window Invisible Grills">
+              <i class="fas fa-search-plus"></i>
+            </a>
           </div>
-          <h4 class="font-poppins font-bold text-base text-white">Experienced Team</h4>
-          <p class="text-xs text-text-secondary mt-2">Trained technicians who understand exact safety standards.</p>
-        </div>
-        <!-- 4 -->
-        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
-            <i class="fas fa-tags"></i>
+          <div class="p-6">
+            <span class="text-xs font-poppins font-semibold text-primary uppercase tracking-wide">Window Grill</span>
+            <h4 class="font-poppins font-bold text-lg text-white mt-1">French Window Safety Grill</h4>
+            <p class="text-xs text-text-secondary mt-1"><i class="fas fa-map-marker-alt text-primary/80 mr-1"></i>Aparna Elixir, Jubilee Hills</p>
           </div>
-          <h4 class="font-poppins font-bold text-base text-white">Affordable Pricing</h4>
-          <p class="text-xs text-text-secondary mt-2">Premium specifications at a direct, competitive factory price.</p>
         </div>
-        <!-- 5 -->
-        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="250">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
-            <i class="fas fa-drafting-compass"></i>
+
+        <!-- Project 3 -->
+        <div class="bg-card-bg rounded-2xl overflow-hidden border border-border-color shadow-lg group relative" data-aos="fade-up" data-aos-delay="300">
+          <div class="relative overflow-hidden h-64">
+            <img src="assets/images/hanger-motorized.png" alt="Motorized Smart Hanger Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <a href="assets/images/hanger-motorized.png" class="lightbox-trigger absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl" data-title="Motorized Smart Ceiling Hanger" data-location="Banjara Hills, Hyderabad" data-category-name="Cloth Hanger Installations">
+              <i class="fas fa-search-plus"></i>
+            </a>
           </div>
-          <h4 class="font-poppins font-bold text-base text-white">Custom Solutions</h4>
-          <p class="text-xs text-text-secondary mt-2">Tailored spacing and layouts for balconies, grills, or hangers.</p>
-        </div>
-        <!-- 6 -->
-        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
-            <i class="far fa-clock"></i>
+          <div class="p-6">
+            <span class="text-xs font-poppins font-semibold text-primary uppercase tracking-wide">Cloth Hanger</span>
+            <h4 class="font-poppins font-bold text-lg text-white mt-1">Motorized Smart Dryer Installation</h4>
+            <p class="text-xs text-text-secondary mt-1"><i class="fas fa-map-marker-alt text-primary/80 mr-1"></i>Banjara Hills Villa, Hyderabad</p>
           </div>
-          <h4 class="font-poppins font-bold text-base text-white">On-Time Project</h4>
-          <p class="text-xs text-text-secondary mt-2">Swift and neat executions to meet agreed client timelines.</p>
         </div>
-        <!-- 7 -->
-        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="350">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
-            <i class="fas fa-layer-group"></i>
-          </div>
-          <h4 class="font-poppins font-bold text-base text-white">Modern Designs</h4>
-          <p class="text-xs text-text-secondary mt-2">Aesthetic structures that blend perfectly with contemporary architecture.</p>
-        </div>
-        <!-- 8 -->
-        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="400">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
-            <i class="fas fa-headset"></i>
-          </div>
-          <h4 class="font-poppins font-bold text-base text-white">After Installation Support</h4>
-          <p class="text-xs text-text-secondary mt-2">Dedicated support and maintenance guarantees post-installation.</p>
-        </div>
-        <!-- 9 -->
-        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="450">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
-            <i class="far fa-smile"></i>
-          </div>
-          <h4 class="font-poppins font-bold text-base text-white">Customer Satisfaction</h4>
-          <p class="text-xs text-text-secondary mt-2">5-star rating across major Hyderabad residential complexes.</p>
-        </div>
-        <!-- 10 -->
-        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="500">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
-            <i class="fas fa-map-marked-alt"></i>
-          </div>
-          <h4 class="font-poppins font-bold text-base text-white">Hyderabad Wide</h4>
-          <p class="text-xs text-text-secondary mt-2">Complete service footprint across all localities in Greater Hyderabad.</p>
-        </div>
+
       </div>
     </div>
   </section>
@@ -521,202 +610,125 @@
     </div>
   </section>
 
-  <!-- BEFORE & AFTER TRANSFORMATIONS -->
-  <section class="py-20 bg-background border-b border-border-color overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-6" data-aos="fade-up">
-        <span class="text-primary font-poppins font-semibold text-xs uppercase tracking-wider block">Transformations</span>
-        <h2 class="text-3xl md:text-4xl font-poppins font-extrabold mt-1 text-white">Before &amp; After Showcase</h2>
-        <p class="text-text-secondary mt-3 text-sm md:text-base max-w-xl mx-auto">Drag the golden divider to see the structural conversion from bare spaces to customized installations.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-        
-        <!-- Slider 1: Invisible Grills -->
-        <div class="relative before-after-slider rounded-2xl overflow-hidden shadow-2xl border border-border-color select-none" id="slider-1" data-aos="fade-right">
-          <!-- Background After Image -->
-          <img src="assets/images/after-balcony.png" alt="After Grill Installation" class="absolute inset-0 w-full h-full object-cover" draggable="false" loading="lazy">
-          <div class="absolute bottom-4 right-4 bg-primary text-background px-3 py-1 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">After</div>
-          
-          <!-- Foreground Clipped Before Image -->
-          <img src="assets/images/before-balcony.png" alt="Before Grill Installation" class="absolute inset-0 w-full h-full object-cover" id="before-img-1" style="clip-path: inset(0 50% 0 0);" draggable="false" loading="lazy">
-          <div class="absolute bottom-4 left-4 bg-black/90 text-white px-3 py-1 border border-border-color/50 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">Before</div>
-          
-          <!-- Range Input Slider -->
-          <input type="range" min="0" max="100" value="50" class="slider-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" data-target="1">
-          
-          <!-- Divider Bar -->
-          <div class="absolute inset-y-0 w-1 bg-primary z-20 pointer-events-none" id="slider-line-1" style="left: 50%;">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border border-background flex items-center justify-center shadow-lg">
-              <div class="flex gap-0.5">
-                <div class="w-[2px] h-3.5 bg-background"></div>
-                <div class="w-[2px] h-3.5 bg-background"></div>
-              </div>
-            </div>
-          </div>
+  <!-- COMPANY INTRODUCTION -->
+  <section class="py-20 bg-section-bg border-b border-border-color">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <span class="text-primary font-poppins font-semibold text-sm uppercase tracking-wider">About R1 Premium</span>
+      <h2 class="text-3xl md:text-4xl font-poppins font-extrabold mt-2 mb-6">Expert Safety and Drying Solutions in Hyderabad</h2>
+      <p class="max-w-3xl mx-auto text-text-secondary text-base md:text-lg leading-relaxed mb-8">
+        R1 Premium is committed to making modern homes safer, smarter, and more elegant. We combine state-of-the-art materials like high-tensile SS316 marine-grade steel cables with engineered ceiling systems to provide maximum security for balconies, windows, and utility spaces without compromising on structural ventilation or scenic views.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-10" id="stats-grid">
+        <div class="bg-card-bg p-6 rounded-xl border border-border-color">
+          <p class="text-3xl md:text-4xl font-poppins font-extrabold text-primary stat-number" data-target="500" data-suffix="+">0+</p>
+          <p class="text-sm text-text-secondary mt-1">Completed Projects</p>
         </div>
-
-        <!-- Slider 2: Cloth Hangers -->
-        <div class="relative before-after-slider rounded-2xl overflow-hidden shadow-2xl border border-border-color select-none" id="slider-2" data-aos="fade-left">
-          <!-- Background After Image -->
-          <img src="assets/images/after-utility.png" alt="After Hanger Installation" class="absolute inset-0 w-full h-full object-cover" draggable="false" loading="lazy">
-          <div class="absolute bottom-4 right-4 bg-primary text-background px-3 py-1 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">After</div>
-          
-          <!-- Foreground Clipped Before Image -->
-          <img src="assets/images/before-utility.png" alt="Before Hanger Installation" class="absolute inset-0 w-full h-full object-cover" id="before-img-2" style="clip-path: inset(0 50% 0 0);" draggable="false" loading="lazy">
-          <div class="absolute bottom-4 left-4 bg-black/90 text-white px-3 py-1 border border-border-color/50 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">Before</div>
-          
-          <!-- Range Input Slider -->
-          <input type="range" min="0" max="100" value="50" class="slider-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" data-target="2">
-          
-          <!-- Divider Bar -->
-          <div class="absolute inset-y-0 w-1 bg-primary z-20 pointer-events-none" id="slider-line-2" style="left: 50%;">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border border-background flex items-center justify-center shadow-lg">
-              <div class="flex gap-0.5">
-                <div class="w-[2px] h-3.5 bg-background"></div>
-                <div class="w-[2px] h-3.5 bg-background"></div>
-              </div>
-            </div>
-          </div>
+        <div class="bg-card-bg p-6 rounded-xl border border-border-color">
+          <p class="text-3xl md:text-4xl font-poppins font-extrabold text-primary stat-number" data-target="100" data-suffix="%">0%</p>
+          <p class="text-sm text-text-secondary mt-1">Rust-Proof Materials</p>
         </div>
-
-        <!-- Slider 3: Invisible Grills Balcony 2 -->
-        <div class="relative before-after-slider rounded-2xl overflow-hidden shadow-2xl border border-border-color select-none" id="slider-3" data-aos="fade-up">
-          <!-- Background After Image -->
-          <img src="assets/images/after-balcony-2.png" alt="After Grill Installation 2" class="absolute inset-0 w-full h-full object-cover" draggable="false" loading="lazy">
-          <div class="absolute bottom-4 right-4 bg-primary text-background px-3 py-1 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">After</div>
-          
-          <!-- Foreground Clipped Before Image -->
-          <img src="assets/images/before-balcony-2.png" alt="Before Grill Installation 2" class="absolute inset-0 w-full h-full object-cover" id="before-img-3" style="clip-path: inset(0 50% 0 0);" draggable="false" loading="lazy">
-          <div class="absolute bottom-4 left-4 bg-black/90 text-white px-3 py-1 border border-border-color/50 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">Before</div>
-          
-          <!-- Range Input Slider -->
-          <input type="range" min="0" max="100" value="50" class="slider-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" data-target="3">
-          
-          <!-- Divider Bar -->
-          <div class="absolute inset-y-0 w-1 bg-primary z-20 pointer-events-none" id="slider-line-3" style="left: 50%;">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border border-background flex items-center justify-center shadow-lg">
-              <div class="flex gap-0.5">
-                <div class="w-[2px] h-3.5 bg-background"></div>
-                <div class="w-[2px] h-3.5 bg-background"></div>
-              </div>
-            </div>
-          </div>
+        <div class="bg-card-bg p-6 rounded-xl border border-border-color">
+          <p class="text-3xl md:text-4xl font-poppins font-extrabold text-primary stat-number" data-target="10" data-suffix="+">0+</p>
+          <p class="text-sm text-text-secondary mt-1">Years Experience</p>
         </div>
-
-        <!-- Slider 4: Window Invisible Grills -->
-        <div class="relative before-after-slider rounded-2xl overflow-hidden shadow-2xl border border-border-color select-none" id="slider-4" data-aos="fade-up">
-          <!-- Background After Image -->
-          <img src="assets/images/after-window.png" alt="After Window Grill Installation" class="absolute inset-0 w-full h-full object-cover" draggable="false" loading="lazy">
-          <div class="absolute bottom-4 right-4 bg-primary text-background px-3 py-1 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">After</div>
-          
-          <!-- Foreground Clipped Before Image -->
-          <img src="assets/images/before-window.png" alt="Before Window Grill Installation" class="absolute inset-0 w-full h-full object-cover" id="before-img-4" style="clip-path: inset(0 50% 0 0);" draggable="false" loading="lazy">
-          <div class="absolute bottom-4 left-4 bg-black/90 text-white px-3 py-1 border border-border-color/50 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">Before</div>
-          
-          <!-- Range Input Slider -->
-          <input type="range" min="0" max="100" value="50" class="slider-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" data-target="4">
-          
-          <!-- Divider Bar -->
-          <div class="absolute inset-y-0 w-1 bg-primary z-20 pointer-events-none" id="slider-line-4" style="left: 50%;">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border border-background flex items-center justify-center shadow-lg">
-              <div class="flex gap-0.5">
-                <div class="w-[2px] h-3.5 bg-background"></div>
-                <div class="w-[2px] h-3.5 bg-background"></div>
-              </div>
-            </div>
-          </div>
+        <div class="bg-card-bg p-6 rounded-xl border border-border-color">
+          <p class="text-3xl md:text-4xl font-poppins font-extrabold text-primary stat-number" data-target="24" data-suffix="/7">0/7</p>
+          <p class="text-sm text-text-secondary mt-1">Customer Support</p>
         </div>
-
-        <!-- Slider 5: Staircase Invisible Grills -->
-        <div class="relative before-after-slider rounded-2xl overflow-hidden shadow-2xl border border-border-color select-none" id="slider-5" data-aos="fade-up">
-          <!-- Background After Image -->
-          <img src="assets/images/after-staircase.png" alt="After Staircase Grill Installation" class="absolute inset-0 w-full h-full object-cover" draggable="false" loading="lazy">
-          <div class="absolute bottom-4 right-4 bg-primary text-background px-3 py-1 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">After</div>
-          
-          <!-- Foreground Clipped Before Image -->
-          <img src="assets/images/before-staircase.png" alt="Before Staircase Grill Installation" class="absolute inset-0 w-full h-full object-cover" id="before-img-5" style="clip-path: inset(0 50% 0 0);" draggable="false" loading="lazy">
-          <div class="absolute bottom-4 left-4 bg-black/90 text-white px-3 py-1 border border-border-color/50 rounded text-xs font-bold uppercase tracking-wider font-poppins z-20 shadow">Before</div>
-          
-          <!-- Range Input Slider -->
-          <input type="range" min="0" max="100" value="50" class="slider-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" data-target="5">
-          
-          <!-- Divider Bar -->
-          <div class="absolute inset-y-0 w-1 bg-primary z-20 pointer-events-none" id="slider-line-5" style="left: 50%;">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border border-background flex items-center justify-center shadow-lg">
-              <div class="flex gap-0.5">
-                <div class="w-[2px] h-3.5 bg-background"></div>
-                <div class="w-[2px] h-3.5 bg-background"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- RECENT WORKS PREVIEW -->
+  <!-- WHY CHOOSE US -->
   <section class="py-20 bg-background border-b border-border-color">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-end justify-between mb-12" data-aos="fade-up">
-        <div>
-          <span class="text-primary font-poppins font-semibold text-sm uppercase tracking-wider">Gallery Showcase</span>
-          <h2 class="text-3xl md:text-4xl font-poppins font-extrabold mt-2">Recent Installation Projects</h2>
-        </div>
-        <a href="works.html" class="mt-4 md:mt-0 bg-card-bg border border-border-color text-white hover:border-primary hover:text-primary transition-all font-poppins font-semibold px-6 py-2.5 rounded-full text-sm flex items-center space-x-2 shadow">
-          <span>View All Installations</span>
-          <i class="fas fa-arrow-right text-xs"></i>
-        </a>
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="text-primary font-poppins font-semibold text-sm uppercase tracking-wider">Unmatched Standard</span>
+        <h2 class="text-3xl md:text-4xl font-poppins font-extrabold mt-2">Why Customers Trust R1 Premium</h2>
+        <p class="text-text-secondary mt-4 max-w-xl mx-auto">We focus on professional craftsmanship, high-grade components, and long-term durability.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- Project 1 -->
-        <div class="bg-card-bg rounded-2xl overflow-hidden border border-border-color shadow-lg group relative" data-aos="fade-up" data-aos-delay="100">
-          <div class="relative overflow-hidden h-64">
-            <img src="assets/images/grill-balcony.png" alt="Balcony Invisible Grill Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-            <a href="assets/images/grill-balcony.png" class="lightbox-trigger absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl" data-title="Luxury Balcony Invisible Grill" data-location="Gachibowli, Hyderabad" data-category-name="Balcony Invisible Grills">
-              <i class="fas fa-search-plus"></i>
-            </a>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <!-- 1 -->
+        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="50">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
+            <i class="fas fa-award"></i>
           </div>
-          <div class="p-6">
-            <span class="text-xs font-poppins font-semibold text-primary uppercase tracking-wide">Balcony Grill</span>
-            <h4 class="font-poppins font-bold text-lg text-white mt-1">High-Rise Balcony Installation</h4>
-            <p class="text-xs text-text-secondary mt-1"><i class="fas fa-map-marker-alt text-primary/80 mr-1"></i>My Home Avana, Gachibowli</p>
-          </div>
+          <h4 class="font-poppins font-bold text-base text-white">Premium Materials</h4>
+          <p class="text-xs text-text-secondary mt-2">SS316 marine-grade wire rope and UV-resistant nylon casings.</p>
         </div>
-
-        <!-- Project 2 -->
-        <div class="bg-card-bg rounded-2xl overflow-hidden border border-border-color shadow-lg group relative" data-aos="fade-up" data-aos-delay="200">
-          <div class="relative overflow-hidden h-64">
-            <img src="assets/images/window-grill.png" alt="French Window Grill Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-            <a href="assets/images/window-grill.png" class="lightbox-trigger absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl" data-title="French Window Invisible Grill" data-location="Jubilee Hills, Hyderabad" data-category-name="Window Invisible Grills">
-              <i class="fas fa-search-plus"></i>
-            </a>
+        <!-- 2 -->
+        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
+            <i class="fas fa-user-shield"></i>
           </div>
-          <div class="p-6">
-            <span class="text-xs font-poppins font-semibold text-primary uppercase tracking-wide">Window Grill</span>
-            <h4 class="font-poppins font-bold text-lg text-white mt-1">French Window Safety Grill</h4>
-            <p class="text-xs text-text-secondary mt-1"><i class="fas fa-map-marker-alt text-primary/80 mr-1"></i>Aparna Elixir, Jubilee Hills</p>
-          </div>
+          <h4 class="font-poppins font-bold text-base text-white">Professional Setup</h4>
+          <p class="text-xs text-text-secondary mt-2">Highly engineered structure installation for maximum structural rigidity.</p>
         </div>
-
-        <!-- Project 3 -->
-        <div class="bg-card-bg rounded-2xl overflow-hidden border border-border-color shadow-lg group relative" data-aos="fade-up" data-aos-delay="300">
-          <div class="relative overflow-hidden h-64">
-            <img src="assets/images/hanger-motorized.png" alt="Motorized Smart Hanger Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-            <a href="assets/images/hanger-motorized.png" class="lightbox-trigger absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl" data-title="Motorized Smart Ceiling Hanger" data-location="Banjara Hills, Hyderabad" data-category-name="Cloth Hanger Installations">
-              <i class="fas fa-search-plus"></i>
-            </a>
+        <!-- 3 -->
+        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="150">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
+            <i class="fas fa-users-cog"></i>
           </div>
-          <div class="p-6">
-            <span class="text-xs font-poppins font-semibold text-primary uppercase tracking-wide">Cloth Hanger</span>
-            <h4 class="font-poppins font-bold text-lg text-white mt-1">Motorized Smart Dryer Installation</h4>
-            <p class="text-xs text-text-secondary mt-1"><i class="fas fa-map-marker-alt text-primary/80 mr-1"></i>Banjara Hills Villa, Hyderabad</p>
-          </div>
+          <h4 class="font-poppins font-bold text-base text-white">Experienced Team</h4>
+          <p class="text-xs text-text-secondary mt-2">Trained technicians who understand exact safety standards.</p>
         </div>
-
+        <!-- 4 -->
+        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
+            <i class="fas fa-tags"></i>
+          </div>
+          <h4 class="font-poppins font-bold text-base text-white">Affordable Pricing</h4>
+          <p class="text-xs text-text-secondary mt-2">Premium specifications at a direct, competitive factory price.</p>
+        </div>
+        <!-- 5 -->
+        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="250">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
+            <i class="fas fa-drafting-compass"></i>
+          </div>
+          <h4 class="font-poppins font-bold text-base text-white">Custom Solutions</h4>
+          <p class="text-xs text-text-secondary mt-2">Tailored spacing and layouts for balconies, grills, or hangers.</p>
+        </div>
+        <!-- 6 -->
+        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
+            <i class="far fa-clock"></i>
+          </div>
+          <h4 class="font-poppins font-bold text-base text-white">On-Time Project</h4>
+          <p class="text-xs text-text-secondary mt-2">Swift and neat executions to meet agreed client timelines.</p>
+        </div>
+        <!-- 7 -->
+        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="350">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h4 class="font-poppins font-bold text-base text-white">Modern Designs</h4>
+          <p class="text-xs text-text-secondary mt-2">Aesthetic structures that blend perfectly with contemporary architecture.</p>
+        </div>
+        <!-- 8 -->
+        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h4 class="font-poppins font-bold text-base text-white">After Installation Support</h4>
+          <p class="text-xs text-text-secondary mt-2">Dedicated support and maintenance guarantees post-installation.</p>
+        </div>
+        <!-- 9 -->
+        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="450">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
+            <i class="far fa-smile"></i>
+          </div>
+          <h4 class="font-poppins font-bold text-base text-white">Customer Satisfaction</h4>
+          <p class="text-xs text-text-secondary mt-2">5-star rating across major Hyderabad residential complexes.</p>
+        </div>
+        <!-- 10 -->
+        <div class="bg-card-bg border-glow p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="500">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 text-xl">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h4 class="font-poppins font-bold text-base text-white">Hyderabad Wide</h4>
+          <p class="text-xs text-text-secondary mt-2">Complete service footprint across all localities in Greater Hyderabad.</p>
+        </div>
       </div>
     </div>
   </section>

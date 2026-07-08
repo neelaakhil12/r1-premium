@@ -83,51 +83,52 @@
         <i class="fas fa-bars text-2xl"></i>
       </button>
     </div>
+  </header>
 
-    <!-- MOBILE MENU BACKDROP -->
-    <div id="mobile-backdrop" class="md:hidden fixed inset-0 bg-black/60 z-[48]"></div>
+  <!-- MOBILE MENU BACKDROP (outside header to avoid backdrop-filter containing-block bug) -->
+  <div id="mobile-backdrop" class="md:hidden fixed inset-0 bg-black/60 z-[48]"></div>
 
-    <!-- MOBILE MENU DRAWER -->
-    <div id="mobile-menu" class="md:hidden fixed top-0 left-0 bottom-0 w-[82%] max-w-sm bg-[#0a0a0a] z-[49] flex flex-col pt-6 pb-8 px-8 shadow-2xl overflow-y-auto">
+  <!-- MOBILE MENU DRAWER -->
+  <div id="mobile-menu" class="md:hidden fixed top-0 left-0 bottom-0 w-[82%] max-w-sm bg-[#0a0a0a] z-[49] flex flex-col pt-6 pb-8 px-8 shadow-2xl overflow-y-auto">
 
-      <!-- Drawer Header -->
-      <div class="flex items-center justify-between mb-10">
-        <a href="index.html" class="flex items-center space-x-2">
-          <img src="assets/images/logo.png" alt="R1 Premium" class="h-9 w-auto object-contain">
-          <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">R1 Premium</span>
-        </a>
-        <button id="menu-close-btn" class="text-white hover:text-primary transition-colors focus:outline-none p-1" aria-label="Close Menu">
-          <i class="fas fa-times text-2xl"></i>
-        </button>
-      </div>
+    <!-- Drawer Header -->
+    <div class="flex items-center justify-between mb-10">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="assets/images/logo.png" alt="R1 Premium" class="h-9 w-auto object-contain">
+        <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">R1 Premium</span>
+      </a>
+      <button id="menu-close-btn" class="text-white hover:text-primary transition-colors focus:outline-none p-1" aria-label="Close Menu">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
 
-      <!-- Nav Links -->
-      <nav class="flex flex-col flex-grow">
-        <a href="index.html" class="text-white font-poppins text-2xl py-5 border-b border-white/10 hover:text-primary transition-colors">Home</a>
-        <a href="services.html" class="text-white font-poppins text-2xl py-5 border-b border-white/10 hover:text-primary transition-colors">Services</a>
-        <a href="about.html" class="text-white font-poppins text-2xl py-5 border-b border-white/10 hover:text-primary transition-colors">About Us</a>
-        <a href="works.html" class="text-primary font-poppins font-semibold text-2xl py-5 border-b border-white/10">Recent Works</a>
-        <a href="contact.html" class="text-white font-poppins text-2xl py-5 hover:text-primary transition-colors">Contact</a>
-      </nav>
+    <!-- Nav Links -->
+    <nav class="flex flex-col flex-grow">
+      <a href="index.html" class="text-white font-poppins text-2xl py-5 border-b border-white/10 hover:text-primary transition-colors">Home</a>
+      <a href="services.html" class="text-white font-poppins text-2xl py-5 border-b border-white/10 hover:text-primary transition-colors">Services</a>
+      <a href="about.html" class="text-white font-poppins text-2xl py-5 border-b border-white/10 hover:text-primary transition-colors">About Us</a>
+      <a href="works.html" class="text-primary font-poppins font-semibold text-2xl py-5 border-b border-white/10">Recent Works</a>
+      <a href="contact.html" class="text-white font-poppins text-2xl py-5 hover:text-primary transition-colors">Contact</a>
+    </nav>
 
-      <!-- Contact Info -->
-      <div class="mt-6 mb-5 pt-5 border-t border-white/10 space-y-3">
-        <a href="tel:+919000278570" class="flex items-center space-x-3 text-white text-sm hover:text-primary transition-colors">
-          <i class="fas fa-phone-alt text-primary text-xs"></i>
-          <span>+91 9000278570</span>
-        </a>
-        <a href="https://wa.me/919000278570" target="_blank" class="flex items-center space-x-3 text-green-400 text-sm hover:text-green-300 transition-colors">
-          <i class="fab fa-whatsapp text-xs"></i>
-          <span>Chat on WhatsApp</span>
-        </a>
-      </div>
-
-      <!-- CTA Button -->
-      <a href="contact.html" class="bg-gold-gradient text-background font-poppins font-bold py-3.5 rounded text-xs uppercase tracking-widest text-center shadow-gold-glow">
-        Book Consultation
+    <!-- Contact Info -->
+    <div class="mt-6 mb-5 pt-5 border-t border-white/10 space-y-3">
+      <a href="tel:+919000278570" class="flex items-center space-x-3 text-white text-sm hover:text-primary transition-colors">
+        <i class="fas fa-phone-alt text-primary text-xs"></i>
+        <span>+91 9000278570</span>
+      </a>
+      <a href="https://wa.me/919000278570" target="_blank" class="flex items-center space-x-3 text-green-400 text-sm hover:text-green-300 transition-colors">
+        <i class="fab fa-whatsapp text-xs"></i>
+        <span>Chat on WhatsApp</span>
       </a>
     </div>
-  </header>
+
+    <!-- CTA Button -->
+    <a href="contact.html" class="bg-gold-gradient text-background font-poppins font-bold py-3.5 rounded text-xs uppercase tracking-widest text-center shadow-gold-glow">
+      Book Consultation
+    </a>
+  </div>
+
 
   <!-- INNER PAGE HERO -->
   <section class="relative bg-section-bg pt-32 pb-16 border-b border-border-color">
