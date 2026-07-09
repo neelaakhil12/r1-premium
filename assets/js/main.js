@@ -398,6 +398,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const mobile = document.getElementById('form-mobile').value.trim();
       const service = document.getElementById('form-service').value;
       const location = document.getElementById('form-location').value.trim();
+      const email = document.getElementById('form-email') ? document.getElementById('form-email').value.trim() : '';
+      const message = document.getElementById('form-message') ? document.getElementById('form-message').value.trim() : '';
       
       if (!name || !mobile || !service || !location) {
         alert('Please fill in all required fields.');
@@ -409,13 +411,31 @@ document.addEventListener('DOMContentLoaded', () => {
       const originalText = submitBtn.innerHTML;
       
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Redirecting to WhatsApp...';
+
+      // Format WhatsApp Message
+      let whatsappText = `Hello R1 Premium, I would like to submit an enquiry:\n\n` +
+                         `Name: ${name}\n` +
+                         `Mobile: ${mobile}\n`;
+      
+      if (email) {
+        whatsappText += `Email: ${email}\n`;
+      }
+      whatsappText += `Service: ${service}\n` +
+                      `Location: ${location}\n`;
+      
+      if (message) {
+        whatsappText += `Message: ${message}\n`;
+      }
+
+      const encodedText = encodeURIComponent(whatsappText);
+      const whatsappUrl = `https://wa.me/919000278570?text=${encodedText}`;
 
       setTimeout(() => {
         // Show Success Alert
         const successMessage = document.createElement('div');
-        successMessage.className = 'mt-4 p-4 bg-green-500/20 border border-green-500 text-green-300 rounded text-center font-medium animate-pulse';
-        successMessage.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Thank you! Your enquiry has been sent. We will contact you shortly.';
+        successMessage.className = 'mt-4 p-4 bg-green-500/20 border border-green-500 text-green-300 rounded text-center font-medium';
+        successMessage.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Thank you! Redirecting to WhatsApp to complete your enquiry...';
         
         contactForm.appendChild(successMessage);
         contactForm.reset();
@@ -423,12 +443,16 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
 
+        // Redirect to WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+
         setTimeout(() => {
           successMessage.remove();
         }, 5000);
-      }, 1500);
+      }, 1200);
     });
   }
+
   // --- BEFORE / AFTER IMAGE SLIDER ---
   const sliderRanges = document.querySelectorAll('.slider-range');
 
