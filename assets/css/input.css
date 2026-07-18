@@ -6,8 +6,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #0F0F10;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #1E293B;
     font-family: 'Inter', sans-serif;
     width: 100%;
     max-width: 100%;
@@ -189,7 +189,7 @@ body.menu-open iframe {
 }
 
 .logo-img-reveal {
-  animation: fadeInLogo 1.8s cubic-bezier(0.4, 0, 0.2, 1) 4.5s forwards, logoPulse 3s infinite ease-in-out 6.3s;
+  animation: fadeInLogo 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards, logoPulse 3s infinite ease-in-out 1.7s;
 }
 
 .splash-text-reveal {
@@ -199,7 +199,7 @@ body.menu-open iframe {
   white-space: nowrap;
   opacity: 0;
   clip-path: inset(0 100% 0 0);
-  animation: fadeInText 0.1s 4.8s forwards, revealText 1.8s steps(10) 4.8s forwards;
+  animation: fadeInText 0.1s 0.8s forwards, revealText 1.8s steps(10) 0.8s forwards;
 }
 
 @keyframes fadeInLogo {
@@ -246,6 +246,71 @@ body.menu-open iframe {
 .scrollbar-none {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+/* --- LIGHT THEME AESTHETIC OVERRIDES --- */
+/* Override text-white classes inside light-themed sections, preserving dark badges/buttons/footers/mobile menus/headers/splash screens */
+body .text-white:not([class*="bg-black"]):not([class*="bg-primary"]):not([class*="bg-green"]):not([class*="bg-red"]):not([class*="bg-gold"]):not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *):not(.lightbox-backdrop *),
+body h1:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *),
+body h2:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *),
+body h3:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *),
+body h4:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *),
+body h5:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *),
+body h6:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *) {
+  color: #1E293B !important;
+}
+
+/* Ensure text-text-secondary displays as slate-500 on light theme */
+.text-text-secondary {
+  color: #64748B !important;
+}
+
+/* Adjust general body paragraphs and secondary texts */
+body p:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *):not(.bg-black *) {
+  color: #475569;
+}
+
+/* Keep header background dark like before (#0F0F10) */
+#main-header {
+  background-color: #0F0F10 !important;
+  border-color: #2E2E2E !important;
+}
+#main-header.bg-background\/95 {
+  background-color: rgba(15, 15, 16, 0.95) !important;
+  border-color: rgba(46, 46, 46, 0.5) !important;
+}
+
+/* Keep footer background dark like before (#0F0F10) */
+footer {
+  background-color: #0F0F10 !important;
+  border-color: #2E2E2E !important;
+}
+
+/* Style social media buttons in footer */
+footer a.bg-card-bg {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+}
+footer a.bg-card-bg:hover {
+  background-color: #D4AF37 !important;
+  color: #0F0F10 !important;
+}
+footer a.bg-card-bg[aria-label="WhatsApp"]:hover {
+  background-color: #22C55E !important;
+  color: #FFFFFF !important;
+}
+
+/* Update slider line background */
+.slider-line {
+  background-color: #D4AF37 !important;
+}
+
+/* Keep hero section text light for contrast on dark background image */
+#hero-section h1 {
+  color: #FFFFFF !important;
+}
+#hero-section p.text-text-secondary {
+  color: #CBD5E1 !important;
 }
 
 

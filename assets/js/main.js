@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           splashScreen.remove();
         }, 800);
-      }, 8000);
+      }, 3500);
     } else {
       // Instantly dismiss on internal link navigations
       splashScreen.style.display = 'none';

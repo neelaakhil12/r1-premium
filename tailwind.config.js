@@ -10,10 +10,10 @@ module.exports = {
         primary: '#D4AF37',       // Luxury Gold
         secondary: '#C89B2A',     // Dark Gold
         accent: '#E8C45C',        // Light Gold
-        background: '#0F0F10',    // Matte Black
-        'section-bg': '#181818',  // Dark Gray
-        'card-bg': '#202020',     // Medium Gray
-        'border-color': '#2E2E2E' // Subtle Gold/Gray border
+        background: '#FFFFFF',    // White
+        'section-bg': '#F8FAFC',  // slate-50 (Very Light Gray)
+        'card-bg': '#FFFFFF',     // White card bg
+        'border-color': '#E2E8F0' // slate-200 border
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
