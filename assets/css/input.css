@@ -309,6 +309,9 @@ footer a.bg-card-bg[aria-label="WhatsApp"]:hover {
 #hero-section h1 {
   color: #FFFFFF !important;
 }
+#hero-section p {
+  color: #FFFFFF !important;
+}
 #hero-section p.text-text-secondary {
   color: #CBD5E1 !important;
 }
