@@ -249,14 +249,14 @@ body.menu-open iframe {
 }
 
 /* --- LIGHT THEME AESTHETIC OVERRIDES --- */
-/* Override text-white classes inside light-themed sections, preserving dark badges/buttons/footers/mobile menus/headers/splash screens */
-body .text-white:not([class*="bg-black"]):not([class*="bg-primary"]):not([class*="bg-green"]):not([class*="bg-red"]):not([class*="bg-gold"]):not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *):not(.lightbox-backdrop *),
-body h1:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *),
-body h2:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *),
-body h3:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *),
-body h4:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *),
-body h5:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *),
-body h6:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *) {
+/* Override text-white classes inside light-themed sections, preserving dark badges/buttons/footers/mobile menus/headers/splash screens/hero section */
+body .text-white:not([class*="bg-black"]):not([class*="bg-primary"]):not([class*="bg-green"]):not([class*="bg-red"]):not([class*="bg-gold"]):not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *):not(#hero-section *):not(.lightbox-backdrop *),
+body h1:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *):not(#hero-section *),
+body h2:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *):not(#hero-section *),
+body h3:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *):not(#hero-section *),
+body h4:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *):not(#hero-section *),
+body h5:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *):not(#hero-section *),
+body h6:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *):not(#hero-section *) {
   color: #1E293B !important;
 }
 
@@ -266,7 +266,7 @@ body h6:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen
 }
 
 /* Adjust general body paragraphs and secondary texts */
-body p:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *):not(.bg-black *) {
+body p:not(footer *):not(#main-header *):not(#mobile-menu *):not(#splash-screen *):not(#hero-section *):not(.bg-black *) {
   color: #475569;
 }
 
